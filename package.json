@@ -1,0 +1,23 @@
+{
+  "name": "eloquentagain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "config": {
+    "@": "src/"
+  },
+  "scripts": {
+    "start": "nodemon --exec 'ts-node' --watch 'src/**/*.ts' 'src/chapter2/index.ts'",
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node --watch 'src/**/**/*.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.5",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  }
+}
