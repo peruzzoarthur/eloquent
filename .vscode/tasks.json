@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run TypeScript File",
+      "type": "shell",
+      "command": "tsc ${file} && node ${fileDirname}/${fileBasenameNoExtension}.js",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$tsc"],
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}
