@@ -36,43 +36,49 @@
 
 // console.log(Object.getPrototypeOf(Math.max) == Function.prototype);
 
-// let protoRabbit = {
-//   speak(this: { type: string }, line: string) {
-//     const type: string = this.type;
-//     console.log(`The ${type} rabbit says '${line}'`);
-//   },
-// };
+let protoRabbit = {
+  speak(this: { type: string }, line: string) {
+    const type: string = this.type;
+    console.log(`The ${type} rabbit says '${line}'`);
+  },
+};
 
-// interface ProtoRabbit {
-//   type: string;
-//   speak: (line: string) => void;
-// }
+interface ProtoRabbit {
+  type: string;
+  teeth: string;
+  speak: (line: string) => void;
+}
 
-// let darkRabbit: ProtoRabbit = Object.create(protoRabbit);
+let darkRabbit: ProtoRabbit = Object.create(protoRabbit);
 
-// darkRabbit.type = "dark";
-// darkRabbit.speak("I'm darkness");
+darkRabbit.type = "dark";
+darkRabbit.speak("I'm darkness");
 
-// const makeRabbit = (type: string): ProtoRabbit => {
-//   let rabbit: ProtoRabbit = Object.create(protoRabbit);
-//   rabbit.type = type;
-//   return rabbit;
-// };
+const makeRabbit = (type: string): ProtoRabbit => {
+  let rabbit: ProtoRabbit = Object.create(protoRabbit);
+  rabbit.type = type;
+  return rabbit;
+};
 
-// class Rabbit implements ProtoRabbit {
-//   constructor(public readonly type: string) {
-//     this.type = type;
-//   }
+class Rabbit implements ProtoRabbit {
+  teeth: string = "small";
+  constructor(public readonly type: string) {
+    this.type = type;
+  }
 
-//   speak(line: string) {
-//     console.log(`The ${this.type} rabbit says '${line}'`);
-//   }
-// }
+  speak(line: string) {
+    console.log(`The ${this.type} rabbit says '${line}'`);
+  }
+}
 
-// const greenRabbit = new Rabbit("green");
+Rabbit.prototype.teeth = "small";
+const greenRabbit = new Rabbit("green");
 
-// greenRabbit.speak("I love green");
+greenRabbit.speak("I love green");
 
+console.log(greenRabbit.teeth);
+greenRabbit.teeth = "brown large teeth";
+console.log(greenRabbit.teeth);
 // console.log(Object.getPrototypeOf(greenRabbit) === Rabbit.prototype);
 
 // console.log(Object.getPrototypeOf(Rabbit) === Function.prototype);
@@ -106,3 +112,15 @@ class SecretiveObject {
 const s3cret = new SecretiveObject();
 console.log(s3cret.interrogate());
 // s3cret.getSecret(); compile error in ts instead as using the #getSecret()
+
+class RandomSource {
+  // private max;
+  constructor(private max: number) {
+    this.max = max;
+  }
+  getNumber() {
+    return Math.floor(Math.random() * this.max);
+  }
+}
+
+console.log(new RandomSource(6).getNumber());
