@@ -1,4 +1,3 @@
-"use strict";
 const countChar = (s, l) => {
     let count = 0;
     for (let i = 0; i < s.length; i++) {
@@ -13,4 +12,5 @@ const countBs = (s) => {
 };
 console.log(countBs("BOB"));
 console.log(countChar("kakkerlak", "k"));
+export {};
 //# sourceMappingURL=e3.js.map

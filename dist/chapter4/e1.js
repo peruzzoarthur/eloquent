@@ -1,4 +1,3 @@
-"use strict";
 const range = (start, end, step = start < end ? 1 : -1) => {
     let numArray = [];
     if (step > 0) {
@@ -25,4 +24,5 @@ console.log(range(5, 2, -1));
 const test = range(88, 6, -1);
 console.log(test);
 console.log(sum(test));
+export {};
 //# sourceMappingURL=e1.js.map

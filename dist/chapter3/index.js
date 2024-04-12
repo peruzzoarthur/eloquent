@@ -1,4 +1,3 @@
-"use strict";
 // const rountTo = (n: number, step: number) => {
 //   let remainder = n % step;
 //   return n - remainder + (remainder < step / 2 ? 0 : step);
@@ -87,4 +86,5 @@ const printFarmInventory = (cows, chickens, pigs) => {
     console.log(`${zeroPad(pigs, 3)} Pigs`);
 };
 printFarmInventory(13, 6, 66);
+export {};
 //# sourceMappingURL=index.js.map

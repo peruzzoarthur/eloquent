@@ -1,4 +1,3 @@
-"use strict";
 console.log("Hello Eloquent People");
 // let number: number = 0;
 // while (number <= 6.66) {
@@ -44,4 +43,5 @@ for (let current = 1;; current++) {
     }
 }
 console.log("Bye bye eloquents 👋");
+export {};
 //# sourceMappingURL=index.js.map

@@ -1,4 +1,3 @@
-"use strict";
 // for (let i = 0; i <= 100; i++) {
 //   if (i % 3 === 0 && i % 5 !== 0) {
 //     console.log("Fizz");
@@ -20,4 +19,5 @@ for (let i = 1; i <= 100; i++) {
     }
     console.log(output || i);
 }
+export {};
 //# sourceMappingURL=e2.js.map

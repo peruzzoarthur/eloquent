@@ -1,4 +1,3 @@
-"use strict";
 console.log("e3");
 const arrayToList = (numArray) => {
     let list = null;
@@ -35,4 +34,5 @@ console.log(arrayToList([10, 20]));
 console.log(listToArray(arrayToList([10, 20, 30])));
 console.log(prepend(10, prepend(20, null)));
 console.log(nth(arrayToList([10, 20, 30]), 1));
+export {};
 //# sourceMappingURL=e3.js.map

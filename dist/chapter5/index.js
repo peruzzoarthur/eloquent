@@ -1,5 +1,5 @@
 // console.log("high 5");
-const scripts = require("./scripts.ts");
+export const scripts = require("./scripts.ts");
 // console.log(scripts[0].ranges[2]);
 const filter = (array, test) => {
     let passed = [];
@@ -75,7 +75,7 @@ let horshoe = "🐴👟";
 // for (let char of roseDragon) {
 //   console.log(char);
 // }
-export const countBy = (items, groupName) => {
+const countBy = (items, groupName) => {
     let counts = [];
     for (let item of items) {
         let name = groupName(item);

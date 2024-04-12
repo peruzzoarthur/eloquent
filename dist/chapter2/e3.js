@@ -1,4 +1,3 @@
-"use strict";
 // const size = 8;
 // for (let row = 1; row <= size; row++) {
 //   if (row % 2 !== 0) {
@@ -24,4 +23,5 @@ for (let row = 0; row < size; row++) {
     board += "\n";
 }
 console.log(board);
+export {};
 //# sourceMappingURL=e3.js.map

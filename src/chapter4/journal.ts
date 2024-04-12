@@ -1,4 +1,4 @@
-var JOURNAL = [
+export const JOURNAL = [
   { events: ["carrot", "exercise", "weekend"], squirrel: false },
   {
     events: ["bread", "pudding", "brushed teeth", "weekend", "touched tree"],
@@ -230,10 +230,10 @@ var JOURNAL = [
 
 // This makes sure the data is exported in node.js —
 // `require('./path/to/journal.js')` will get you the array.
-if (
-  typeof module != "undefined" &&
-  module.exports &&
-  (typeof window == "undefined" || window.exports != exports)
-)
-  module.exports = JOURNAL;
-if (typeof global != "undefined" && !global.JOURNAL) global.JOURNAL = JOURNAL;
+// if (
+//   typeof module != "undefined" &&
+//   module.exports &&
+//   (typeof window == "undefined" || window.exports != exports)
+// )
+//   module.exports = JOURNAL;
+// if (typeof global != "undefined" && !global.JOURNAL) global.JOURNAL = JOURNAL;

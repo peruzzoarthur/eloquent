@@ -1,4 +1,3 @@
-"use strict";
 const reverseArray = (array) => {
     let newArray = [];
     for (let i = array.length - 1; i >= 0; i--) {
@@ -32,4 +31,5 @@ const reverseArrayInPlace = (array) => {
 };
 console.log(reverseArrayInPlace(myNumbersArray));
 console.log(Math.floor(5 / 2));
+export {};
 //# sourceMappingURL=e2.js.map

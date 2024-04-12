@@ -1,4 +1,3 @@
-"use strict";
 const every = (numArray, test) => {
     for (let i = 0; i < numArray.length; i++) {
         const trueOrFalse = test(numArray[i]);
@@ -19,4 +18,5 @@ console.log("\nevery2");
 console.log(every2([1, 3, 5], (n) => n < 10));
 console.log(every2([2, 4, 16], (n) => n < 10));
 console.log(every2([], (n) => n < 10));
+export {};
 //# sourceMappingURL=e3.js.map

@@ -1,4 +1,3 @@
-"use strict";
 const isEven = (n) => {
     if (n === 0) {
         return true;
@@ -14,4 +13,5 @@ const isEven = (n) => {
     }
 };
 console.log(isEven(662));
+export {};
 //# sourceMappingURL=e2.js.map
